@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- index.css -->
+    <link rel="stylesheet" href="index.css">
+    <!-- slick.css -->
+    <link rel="stylesheet" href="slick.css">
+    <!-- slick-theme.css -->
+    <link rel="stylesheet" href="slick-theme.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- head -->
+    <div id="head">
+        <img class="logoImg" v-bind:src="logoImg" alt="">
+        <div class="menuBer_open">
+            <div class="topBar"></div>
+            <div class="middleBar"></div>
+            <div class="bottomBar"></div>
+        </div>
+        <!-- menu_bg -->
+        <div class="menu_bg"></div>
+    </div>
+    <!-- menu -->
+    <div id="menu">
+        <div class="menu_top_div">
+            <div class="menu_top" v-for="menu_top in menu_tops">
+                <a class="menu_top_link" v-bind:href="menu_top.link">{{menu_top.text}}</a>
+            </div>
+        </div>
+        <div class="menu_bottom_div">
+            <a class="menu_bottom_link" v-for="menu_bottom in menu_bottoms" href="">{{menu_bottom.text}}</a>
+        </div>
+    </div>
+    <!-- top -->
+    <video id="top" v-bind:src="topVideo" autoplay muted loop></video>
+    <!-- pickUp -->
+    <div id="pickUp">
+        <div class="pickUp_title">{{title}}</div>
+        <div class="slick01">
+            <img class="slick01Img" v-for="pickUp in pickUps" v-bind:src="pickUp" alt="">
+        </div>
+    </div>
+    <!-- feature -->
+    <div id="feature">
+        <div class="feature_title">{{title}}</div>
+        <div class="feature_div">
+            <div class="featureBox" v-for="feature in features">
+                <div class="featureImg_div">
+                    <img v-bind:class="feature.class" class="featureImg" v-bind:src="feature.img" alt="">
+                </div>
+                <div class="featureText_div">
+                    <div class="featureText1">{{feature.text1}}</div>
+                    <div class="featureText2">{{feature.text2}}</div>
+                    <div class="featureText3">{{feature.text3}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact -->
+    <div id="contact">
+        <div class="contact_title">{{title}}</div>
+        <div class="contact_div">
+            <div class="contact_text_div">
+                <div class="contact_text1">{{text1}}</div>
+                <div class="contact_text2">{{text2}}</div>
+                <div class="contact_text3">{{text3}}</div>
+            </div>
+            <div class="contact_input_div">
+                <form action="">
+                    <div>{{inputText1}}</div>
+                    <div><input class="input1" type="text"></div>
+                    <div>{{inputText2}}</div>
+                    <div><input class="input2" type="text"></div>
+                    <div>{{inputText3}}</div>
+                    <div><input class="input3" type="text"></div>
+                    <div><input class="submit" type="submit" value="SEND"></div>
+                </form>
+            </div>
+        </div>
+        <div class="copyWright">{{copyWright}}</div>
+    </div>
+    <!-- jquery.js -->
+    <script src="jquery.js"></script>
+    <!-- vue.js -->
+    <script src="vue.js"></script>
+    <!-- slick.js -->
+    <script src="slick.min.js"></script>
+    <!-- index.js -->
+    <script src="index.js"></script>
+</body>
+</html>

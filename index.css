@@ -1,0 +1,262 @@
+/* body */
+body{
+    margin: 0;
+}
+/* head */
+#head{
+    width: 100%;
+    padding: 15px 0;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+}
+.logoImg{
+    display: block;
+    margin-left: 2%;
+}
+.menuBer_open{
+    cursor: pointer;
+    width: 35px;
+    height: 24px;
+    position: relative;
+    margin-right: 2%;
+    z-index: 10;
+}
+.topBar,.middleBar,.bottomBar{
+    transition: 1s;
+    height: 2px;
+    width: 35px;
+    position: absolute;
+    background-color: #333333;
+}
+.middleBar{
+    top: 11px;
+}
+.bottomBar{
+    top:22px;
+}
+/* menu */
+.menu_bg{
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+.topBar_2{
+    transition: 1s;
+    transform: rotate(135deg);
+    top: 12px;
+    background-color: white;
+}
+.middleBar_2{
+    transition: 1s;
+    display: none;
+    background-color: white;
+}
+.bottomBar_2{
+    transition: 1s;
+    transform: rotate(-135deg);
+    top: 12px;
+    background-color: white;
+}
+/* menu */
+#menu{
+    transition: 1s;
+    margin-left: -300px;
+    width: 250px;
+    position: absolute;
+    z-index: 20;
+    padding: 0 20px;
+    background-color: #121212;
+}
+.menu_2{
+    transition: 1s;
+    margin-left: 0 !important;
+}
+.menu_top_div{
+    margin-top: 50px;
+}
+.menu_top{
+    padding: 20px 0;
+    border-bottom: solid 1px white;
+}
+.menu_top_link{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+.menu_top_div:nth-child(1){
+    border-top: solid 1px white;
+}
+.menu_bottom_div{
+    margin-top: 50px;
+}
+.menu_bottom_link{
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+/* top */
+#top{
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    padding-top: 80px;
+}
+/* pickUp */
+#pickUp{
+    z-index: -1;
+}
+.pickUp_title{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin: 50px 0 20px 0;
+}
+.slick01{
+    z-index: -1;
+}
+.slick-prev,.slick-next{
+    display: none !important;
+}
+.slick01Img{
+    margin: 0 20px;
+}
+/* feature */
+#feature{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+.feature_title{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin: 50px 0 20px 0;
+}
+.feature_div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 26rem);
+    justify-content: center;
+    gap:30px;
+}
+.featureBox{
+    display: block;
+    box-shadow: 0 0 10px gray;
+}
+.featureImg{
+    width: 100%;
+    position: absolute;
+    top: 300px;
+    opacity: 0;
+}
+.featureImg_div{
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+}
+.featureOpen{
+    transition: 1s;
+    opacity: 1;
+    top: 0;
+}
+.featureText_div{
+    padding: 20px;
+}
+.featureText2{
+    font-weight: bold;
+    padding: 20px 0;
+}
+.featureText3{
+    text-align: right;
+}
+
+/* contact */
+#contact{
+    background-color: #121212;
+    margin-top: 100px;
+    padding: 50px 0 10px 0;
+}
+.contact_title{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+.contact_div{
+    display: grid;
+    max-width: 1400px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, 40em);
+    justify-content: center;
+    gap:50px;
+}
+.contact_text_div{
+    color: white;
+    font-size: 14px;
+    padding: 0 30px;
+}
+.contact_text2{
+    margin: 30px 0;
+}
+.contact_input_div{
+    color: white;
+    font-size: 14px;
+    padding: 0 30px;
+}
+.input1{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.input2{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.input3{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.submit{
+    cursor: pointer;
+    color: white;
+    border: solid 1px white;
+    padding: 15px 80px;
+    background-color: #121212;
+}
+.submit:hover{
+    background-color: white;
+    color: #121212;
+}
+.copyWright{
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 12px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width:700px){
+    .contact_div {
+        grid-template-columns: repeat(auto-fit, 22em);
+    }
+    .feature_div {
+        grid-template-columns: repeat(auto-fit, 22rem);
+    }
+    .submit {
+        width: 100%;
+    }
+    .input1 ,.input2 ,.input3{
+        width: 97.5%;
+    } 
+}
